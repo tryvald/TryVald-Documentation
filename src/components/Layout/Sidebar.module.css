@@ -86,6 +86,28 @@
   margin-top: 2px;
 }
 
+/* Collapsed state on desktop */
+.sidebar.collapsed {
+  width: 60px;
+  overflow: hidden;
+}
+.sidebar.collapsed .sidebarHeader h3,
+.sidebar.collapsed .commandName,
+.sidebar.collapsed .commandDesc,
+.sidebar.collapsed .categoryTitle {
+  display: none;
+}
+.sidebar.collapsed .commandLink {
+  padding: 0.5rem;
+  text-align: center;
+}
+.sidebar.collapsed .commandLink::before {
+  content: '/'; /* show a slash to indicate commands */
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+
 /* Mobile styles */
 @media (max-width: 768px) {
   .sidebar {

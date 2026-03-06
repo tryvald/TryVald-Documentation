@@ -3,15 +3,15 @@ import { Link, useLocation } from 'react-router-dom';
 import commandsData from '../../data/commands';
 import styles from './Sidebar.module.css';
 
-export default function Sidebar({ isOpen, close }) {
+export default function Sidebar({ isOpen, close, collapsed }) {
   const location = useLocation();
 
   useEffect(() => {
-    close(); // close sidebar on route change (mobile)
+    close(); // close mobile sidebar on route change
   }, [location, close]);
 
   return (
-    <aside className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
+    <aside className={`${styles.sidebar} ${isOpen ? styles.open : ''} ${collapsed ? styles.collapsed : ''}`}>
       <div className={styles.sidebarHeader}>
         <h3>Commands</h3>
         <button className={styles.closeButton} onClick={close}>×</button>
