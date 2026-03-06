@@ -109,7 +109,7 @@
   font-family: var(--font-display);
 }
 
-/* Feature Grid */
+/* Feature grid - already uses auto-fill, but we can adjust min width */
 .featureGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -117,6 +117,20 @@
   margin-top: 2rem;
 }
 
+/* For very large screens, make cards slightly larger */
+@media (min-width: 1600px) {
+  .featureGrid {
+    grid-template-columns: repeat(4, 1fr); /* Force 4 columns */
+  }
+  
+  .hero h1 {
+    font-size: 6rem; /* Larger heading */
+  }
+  
+  .tagline {
+    font-size: 2rem;
+  }
+}
 /* Command Grid (for quick overview) */
 .commandGrid {
   display: grid;

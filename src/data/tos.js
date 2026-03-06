@@ -51,7 +51,7 @@ const tosContent = {
     },
     {
       title: '13. Contact Information',
-      content: 'If you have any questions about these Terms, please contact us:\n\n• Discord: https://discord.com/users/16182062422638277253\n• Email: gangcaponebeige@gmail.com\n• GitHub: https://github.com/tryvald/TryVald-discord-bot'
+      content: 'If you have any questions about these Terms, please contact us:\n\n• Discord: https://discord.com/users/16182062422638277253\n• Email: TryVald@proton.me \n• GitHub: https://github.com/tryvald/TryVald-discord-bot'
     }
   ]
 };

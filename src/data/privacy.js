@@ -35,7 +35,7 @@ const privacyContent = {
     },
     {
       title: '9. Contact Us',
-      content: 'If you have any questions or concerns about this Privacy Policy or your data, please contact us:\n\n• Discord: [Your Discord Server Invite Link]\n• Email: [your-email@example.com]\n• GitHub: [Your GitHub Repository URL]'
+      content: 'If you have any questions or concerns about this Privacy Policy or your data, please contact us:\n\n• Discord: https://discord.gg/r7yyc2wZFH \n• Email: TryVald@proton.me \n• GitHub: https://github.com/tryvald/TryVald-discord-bot'
     }
   ]
 };

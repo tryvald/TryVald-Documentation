@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import commands from '../data/commands';
 import CommandCard from '../components/CommandCard';
-import styles from './Home.module.css';
 
 export default function Home() {
   // Smooth scroll for hash links
@@ -14,26 +13,58 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={styles.home}>
-      <section className={styles.hero}>
-        <h1>TryVald</h1>
-        <p className={styles.tagline}>Your all‑in‑one Discord bot</p>
-        <div className={styles.heroButtons}>
-          <a href="#getting-started" className={styles.primaryButton}>Get Started</a>
-          <a href="https://discord.com/oauth2/authorize?client_id=1476990664204882062&permissions=8&integration_type=0&scope=bot+applications.commands" className={styles.secondaryButton} target="_blank" rel="noopener">Invite Bot</a>
+    <div className="max-w-7xl mx-auto p-6 md:p-10 font-mono">
+      {/* Hero Section */}
+      <section className="text-center py-12 md:py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-radial from-[#ffdb89]/10 to-transparent pointer-events-none" />
+        <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tight text-[#ffdb89] mb-4 animate-pulse">
+          TryVald
+        </h1>
+        <p className="text-2xl text-gray-300 mb-8 border-r-2 border-[#ffdb89] inline-block pr-2">
+          Your all‑in‑one Discord bot
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#getting-started"
+            className="px-8 py-3 rounded-full bg-[#ffdb89] text-[#030303] font-bold hover:bg-[#1c4332] transition transform hover:-translate-y-1 shadow-lg"
+          >
+            Get Started
+          </a>
+          <a
+            href="https://discord.com/oauth2/authorize?client_id=1476990664204882062&permissions=8&integration_type=0&scope=bot+applications.commands"
+            target="_blank"
+            rel="noopener"
+            className="px-8 py-3 rounded-full border border-[#ffdb89] text-[#ffdb89] font-bold hover:bg-[#ffdb89]/10 transition transform hover:-translate-y-1"
+          >
+            Invite Bot
+          </a>
         </div>
       </section>
 
-      <section id="getting-started" className={styles.section}>
-        <h2>Getting Started</h2>
-        <p>Add TryVald to your server with the link above. The bot requires <strong>Administrator</strong> permissions to function fully. If you can't grant that, ensure the bot's role has necessary permissions (Manage Roles, Manage Channels, etc.).</p>
-        {/* more instructions */}
+      {/* Getting Started */}
+      <section id="getting-started" className="scroll-mt-20 mb-16">
+        <h2 className="text-4xl font-black uppercase tracking-tight text-white mb-4 inline-block border-b-4 border-[#ffdb89] pb-1">
+          Getting Started
+        </h2>
+        <p className="text-gray-300 text-lg leading-relaxed">
+          Add TryVald to your server with the link above. The bot requires{' '}
+          <strong className="text-[#ffdb89]">Administrator</strong> permissions to function fully.
+          If you can't grant that, ensure the bot's role has necessary permissions
+          (Manage Roles, Manage Channels, etc.).
+        </p>
       </section>
 
+      {/* Command Categories */}
       {Object.entries(commands).map(([category, cmds]) => (
-        <section key={category} id={category.toLowerCase()} className={styles.section}>
-          <h2>{category}</h2>
-          <div className={styles.commandGrid}>
+        <section
+          key={category}
+          id={category.toLowerCase()}
+          className="scroll-mt-20 mb-16"
+        >
+          <h2 className="text-4xl font-black uppercase tracking-tight text-white mb-6 inline-block border-b-4 border-[#ffdb89] pb-1">
+            {category}
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 items-start">
             {cmds.map(cmd => (
               <CommandCard key={cmd.name} command={cmd} />
             ))}
