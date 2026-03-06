@@ -64,3 +64,9 @@ a:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-bronze);
 }
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 18px; /* Slightly larger base font */
+  }
+}

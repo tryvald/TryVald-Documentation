@@ -16,7 +16,7 @@ export default function Navbar({ toggleSidebar, toggleCollapse, collapsed }) {
             <Link to="/" className={styles.logo}>
                 {/* Comment out or remove the img tag */}
                 {/* <img src="/logo.svg" alt="TryVald" height="32" /> */}
-                <span className={styles.logoText}>TryVald</span>
+                <span className={styles.logoText}>T</span>
             </Link>
           <span>TryVald Docs</span>
         </Link>
