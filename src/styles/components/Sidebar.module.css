@@ -1,0 +1,87 @@
+.sidebar {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 280px;
+  height: calc(100vh - 70px);
+  background-color: var(--color-black);
+  border-right: 1px solid var(--color-gray-dark);
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+  z-index: 90;
+  padding: 1rem 0;
+}
+
+.sidebarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem 1rem;
+  border-bottom: 1px solid var(--color-gray-dark);
+}
+.sidebarHeader h3 {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--color-accent);
+}
+.closeButton {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.sidebarContent {
+  padding: 0.5rem 0;
+}
+
+.category {
+  margin-bottom: 1.5rem;
+}
+.categoryTitle {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-bronze);
+  padding: 0.5rem 1rem;
+  background: var(--color-gray-dark);
+}
+
+.commandLink {
+  display: block;
+  padding: 0.5rem 1rem;
+  border-left: 2px solid transparent;
+  transition: all 0.2s;
+}
+.commandLink:hover {
+  background: var(--color-gray-dark);
+  border-left-color: var(--color-accent);
+}
+.commandName {
+  font-family: var(--font-mono);
+  font-weight: bold;
+  color: white;
+  display: block;
+}
+.commandDesc {
+  font-size: 0.75rem;
+  color: #aaa;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    top: 60px;
+    height: calc(100vh - 60px);
+  }
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  .closeButton {
+    display: block;
+  }
+}
