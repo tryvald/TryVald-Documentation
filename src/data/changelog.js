@@ -1,7 +1,7 @@
 const changelog = [
   {
     version: '1.0.0',
-    date: '2025-03-01',
+    date: '2026-02-27',
     changes: [
       'Initial release',
       'Added Utility commands: /ping, /avatar, /serverinfo, /userinfo, /roll, /choose, /poll, /help',
@@ -14,7 +14,7 @@ const changelog = [
   },
   {
     version: '1.1.0',
-    date: '2025-03-05',
+    date: '2025-03-01',
     changes: [
       'Added comprehensive Logging system with /log command',
       'Log events: messageDelete, messageUpdate, guildMemberAdd, guildMemberRemove, channelCreate, channelDelete, roleCreate, roleDelete, voiceStateUpdate, messageBulkDelete, and more',
@@ -23,7 +23,7 @@ const changelog = [
   },
   {
     version: '1.2.0',
-    date: '2025-03-08',
+    date: '2026-03-03',
     changes: [
       'Added /welcome and /goodbye commands for customizable join/leave messages',
       'Embed support with placeholders: {user}, {user.name}, {server}, {memberCount}',
@@ -32,7 +32,7 @@ const changelog = [
   },
   {
     version: '1.3.0',
-    date: '2025-03-10',
+    date: '2026-03-4',
     changes: [
       'Added Auto‑Role system with /autorole command',
       'Support for multiple member roles and separate bot role',
@@ -42,7 +42,7 @@ const changelog = [
   },
   {
     version: '1.4.0',
-    date: '2025-03-12',
+    date: '2026-03-5',
     changes: [
       'Added Reaction Roles with /reactionrole command',
       'Button‑based panels, up to 6 roles per quick create',
@@ -52,7 +52,7 @@ const changelog = [
   },
   {
     version: '1.5.0',
-    date: '2025-03-15',
+    date: '2026-03-6',
     changes: [
       'Added Scheduled Messages with /schedule command',
       'Natural language scheduling: once, daily, weekly (no cron needed)',
@@ -62,7 +62,7 @@ const changelog = [
   },
   {
     version: '1.6.0',
-    date: '2025-03-18',
+    date: '2026-03-7',
     changes: [
       'Added /lock command to lock/unlock channels with optional duration',
       'Added /mute command (alias for /timeout)',
@@ -73,7 +73,7 @@ const changelog = [
   },
   {
     version: '1.7.0',
-    date: '2025-03-20',
+    date: '2026-03-9',
     changes: [
       'Enhanced logging: added channelUpdate, roleUpdate, inviteCreate, guildMemberUpdate',
       'Added /log toggleall for quick configuration',
@@ -83,7 +83,7 @@ const changelog = [
   },
   {
     version: '1.8.0',
-    date: '2025-03-22',
+    date: '2026-03-10',
     changes: [
       'Added /stats command with bot uptime, server count, memory usage',
       'Added /reload command to reload commands without restart',
@@ -92,7 +92,7 @@ const changelog = [
   },
   {
     version: '2.0.0',
-    date: '2025-03-25',
+    date: '2025-03-16',
     changes: [
       'Major refactor: migrated to discord.js v14',
       'Added all intents for full functionality',
