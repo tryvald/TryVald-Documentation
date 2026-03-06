@@ -13,7 +13,11 @@ export default function Navbar({ toggleSidebar, toggleCollapse, collapsed }) {
           {collapsed ? '→' : '←'}
         </button>
         <Link to="/" className={styles.logo}>
-          <img src="/logo.svg" alt="TryVald" height="32" />
+            <Link to="/" className={styles.logo}>
+                {/* Comment out or remove the img tag */}
+                {/* <img src="/logo.svg" alt="TryVald" height="32" /> */}
+                <span className={styles.logoText}>TryVald</span>
+            </Link>
           <span>TryVald Docs</span>
         </Link>
       </div>

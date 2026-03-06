@@ -2,6 +2,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  width: 100%; /* Full width */
   background-color: var(--color-black);
   border-bottom: 1px solid var(--color-gray-dark);
   padding: 0.75rem 2rem;
@@ -11,12 +12,14 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   font-family: var(--font-mono);
+  box-sizing: border-box;
 }
 
 .navLeft {
   display: flex;
   align-items: center;
   gap: 1rem;
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
 .menuButton {
@@ -25,53 +28,12 @@
   color: var(--color-accent);
   font-size: 1.5rem;
   cursor: pointer;
-  display: none; /* Hidden on desktop, shown on mobile */
+  display: none; /* Hidden on desktop */
   padding: 0.25rem 0.5rem;
   transition: color 0.2s;
 }
 .menuButton:hover {
-  color: #ffd966; /* lighter accent */
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 1.1rem;
-  letter-spacing: -0.5px;
-}
-.logo img {
-  filter: brightness(0) invert(1); /* makes white logo if original is dark */
-  height: 32px;
-  width: auto;
-}
-
-.navCenter {
-  flex: 1;
-  max-width: 400px;
-  margin: 0 2rem;
-}
-
-.navRight {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.navLink {
-  font-family: var(--font-mono);
-  color: #ccc;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.2s;
-  padding: 0.25rem 0;
-  border-bottom: 1px solid transparent;
-}
-.navLink:hover {
-  color: var(--color-accent);
-  border-bottom-color: var(--color-accent);
+  color: #ffd966;
 }
 
 .collapseButton {
@@ -94,10 +56,59 @@
   border-color: var(--color-accent);
 }
 
-@media (max-width: 768px) {
-  .collapseButton {
-    display: none; /* hide on mobile, only menu button works */
-  }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: -0.5px;
+  white-space: nowrap; /* Prevent wrapping */
+}
+.logo img {
+  height: 32px;
+  width: auto;
+  display: block; /* Remove extra space */
+  /* If logo is dark on dark background, uncomment:
+  filter: brightness(0) invert(1); */
+}
+/* Fallback if image missing: show a text placeholder */
+.logo img[alt="TryVald"]:not([src]) {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-accent);
+  border-radius: 4px;
+  content: '';
+}
+
+.navCenter {
+  flex: 1; /* Take available space */
+  max-width: 400px;
+  margin: 0 2rem;
+  min-width: 200px; /* Prevent from becoming too small */
+}
+
+.navRight {
+  display: flex;
+  gap: 1.5rem;
+  flex-shrink: 0;
+}
+
+.navLink {
+  font-family: var(--font-mono);
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid transparent;
+}
+.navLink:hover {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
 }
 
 /* Mobile styles */
@@ -108,11 +119,14 @@
   .menuButton {
     display: block; /* show on mobile */
   }
+  .collapseButton {
+    display: none; /* hide on mobile */
+  }
   .navCenter {
     display: none; /* hide search bar on mobile */
   }
   .navRight {
-    display: none; /* hide links on mobile – could be replaced by a drawer, but for now hidden */
+    display: none; /* hide links on mobile */
   }
   .logo span {
     display: none; /* hide text on mobile, only show icon */
