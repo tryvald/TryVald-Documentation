@@ -6,10 +6,7 @@ export default function CommandCard({ command }) {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div
-      className="bg-[#030303] border border-[#2c2c2e] rounded-lg overflow-hidden transition-all hover:border-[#ffdb89] hover:shadow-lg font-mono"
-      id={command.name}
-    >
+    <div className="bg-[#030303] rounded-lg shadow-md hover:scale-105 transition-transform card-hover-effect">
       {/* Header */}
       <div
         className="flex items-center p-4 cursor-pointer bg-[#030303] hover:bg-[#2c2c2e] transition-colors"
