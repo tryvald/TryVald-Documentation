@@ -1,0 +1,12 @@
+:root {
+  --color-bg: #1c4332;
+  --color-accent: #ffdb89;
+  --color-dark: #030303;
+  --color-gray-dark: #2c2c2e;
+  --color-red: #ad0013;
+  --color-bronze: #a67d43;
+  --color-black: #121312;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Oswald', 'Bebas Neue', 'Impact', sans-serif;
+}
