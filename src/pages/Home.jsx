@@ -16,7 +16,7 @@ export default function Home() {
     <div className="max-w-7xl mx-auto p-6 md:p-10 font-mono">
       {/* Hero Section */}
       <section className="text-center py-12 md:py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-radial from-[#ffdb89]/10 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-radial from-[#ffdb89]/10 via-transparent to-transparent pointer-events-none" />
         <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tight text-[#ffdb89] mb-4 animate-pulse">
           TryVald
         </h1>
@@ -26,7 +26,7 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#getting-started"
-            className="px-8 py-3 rounded-full bg-[#ffdb89] text-[#030303] font-bold hover:bg-[#1c4332] transition transform hover:-translate-y-1 shadow-lg"
+            className="px-8 py-3 rounded-full bg-gradient-to-r from-[#ffdb89] to-[#e6c27a] hover:from-[#e6c27a] hover:to-[#ffdb89] text-[#030303] font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           >
             Get Started
           </a>
@@ -34,7 +34,7 @@ export default function Home() {
             href="https://discord.com/oauth2/authorize?client_id=1476990664204882062&permissions=8&integration_type=0&scope=bot+applications.commands"
             target="_blank"
             rel="noopener"
-            className="px-8 py-3 rounded-full border border-[#ffdb89] text-[#ffdb89] font-bold hover:bg-[#ffdb89]/10 transition transform hover:-translate-y-1"
+            className="px-8 py-3 rounded-full border border-[#ffdb89] text-[#ffdb89] font-bold hover:bg-gradient-to-r hover:from-[#ffdb89] hover:to-[#e6c27a] hover:text-[#030303] transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1"
           >
             Invite Bot
           </a>

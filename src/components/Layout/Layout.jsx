@@ -1,12 +1,10 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Layout({ children }) {
-  const location = useLocation();
-
   return (
     <div className="flex flex-col min-h-screen bg-[#1c4332]">
       {/* Fixed Navbar */}
-      <header className="fixed top-0 left-0 right-0 z-50 h-16 bg-[#030303] border-b border-[#2c2c2e] flex items-center px-4 md:px-8">
+      <header className="fixed top-0 left-0 right-0 z-50 h-16 bg-[#030303]/80 backdrop-blur-md border-b border-[#2c2c2e]/50 flex items-center px-4 md:px-8">
         {/* Logo on the left */}
         <div className="flex items-center gap-4">
           <Link to="/" className="flex items-center gap-2">
