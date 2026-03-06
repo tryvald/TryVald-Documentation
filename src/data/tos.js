@@ -1,6 +1,3 @@
-// src/data/tos.js
-// Terms of Service for TryVald Discord Bot
-
 const tosContent = {
   lastUpdated: '2025-03-06',
   sections: [

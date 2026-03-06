@@ -1,0 +1,241 @@
+.home {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: var(--font-mono);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(255, 219, 137, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-family: var(--font-display);
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px rgba(255, 219, 137, 0.5); }
+  to { text-shadow: 0 0 20px rgba(255, 219, 137, 0.8); }
+}
+
+.tagline {
+  font-size: 1.5rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+  font-family: var(--font-mono);
+  border-right: 2px solid var(--color-accent);
+  display: inline-block;
+  padding-right: 0.5rem;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--color-accent); }
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.primaryButton, .secondaryButton {
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-family: var(--font-mono);
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.primaryButton {
+  background-color: var(--color-accent);
+  color: var(--color-black);
+}
+.primaryButton:hover {
+  background-color: #ffd966;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 219, 137, 0.4);
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+.secondaryButton:hover {
+  background-color: rgba(255, 219, 137, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 219, 137, 0.2);
+}
+
+/* Section Styling */
+.section {
+  margin: 4rem 0;
+  scroll-margin-top: 80px;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: white;
+  display: inline-block;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 0.25rem;
+  font-family: var(--font-display);
+}
+
+/* Feature Grid */
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Command Grid (for quick overview) */
+.commandGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.commandCard {
+  background-color: var(--color-black);
+  border: 1px solid var(--color-gray-dark);
+  border-radius: 6px;
+  padding: 1rem;
+  transition: all 0.2s;
+  text-decoration: none;
+  color: white;
+}
+.commandCard:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+.commandName {
+  font-family: var(--font-mono);
+  font-weight: bold;
+  color: var(--color-accent);
+  display: block;
+  font-size: 1.1rem;
+}
+.commandDesc {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* Stats / Numbers */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+.statItem {
+  background-color: var(--color-black);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-gray-dark);
+  min-width: 150px;
+}
+.statNumber {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+}
+.statLabel {
+  color: #ccc;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Call to Action */
+.cta {
+  text-align: center;
+  background-color: var(--color-black);
+  border: 1px solid var(--color-gray-dark);
+  border-radius: 12px;
+  padding: 3rem;
+  margin: 4rem 0;
+}
+.cta h3 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+.cta p {
+  color: #ccc;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home {
+    padding: 1rem;
+  }
+  .hero {
+    padding: 2rem 1rem;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .tagline {
+    font-size: 1.2rem;
+  }
+  .heroButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .primaryButton, .secondaryButton {
+    width: 80%;
+  }
+  .section h2 {
+    font-size: 2rem;
+  }
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cta {
+    padding: 2rem;
+  }
+  .cta h3 {
+    font-size: 1.5rem;
+  }
+}
