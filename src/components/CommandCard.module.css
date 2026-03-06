@@ -1,0 +1,115 @@
+.card {
+  background-color: var(--color-black);
+  border: 1px solid var(--color-gray-dark);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  font-family: var(--font-mono);
+}
+.card:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: var(--color-black);
+  transition: background-color 0.2s;
+}
+.header:hover {
+  background-color: var(--color-gray-dark);
+}
+
+.name {
+  font-weight: bold;
+  color: var(--color-accent);
+  min-width: 120px;
+  font-size: 1rem;
+}
+
+.shortDesc {
+  flex: 1;
+  color: #ccc;
+  font-size: 0.9rem;
+  margin: 0 1rem;
+}
+
+.expandIcon {
+  color: var(--color-bronze);
+  font-size: 1.2rem;
+  width: 24px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.expandIcon:hover {
+  color: var(--color-accent);
+}
+
+.details {
+  padding: 1rem;
+  border-top: 1px dashed var(--color-gray-dark);
+  background-color: var(--color-gray-dark);
+  font-family: var(--font-sans);
+}
+
+.details p {
+  margin-bottom: 1rem;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+.usage {
+  margin-bottom: 1rem;
+  background-color: var(--color-black);
+  padding: 0.75rem;
+  border-radius: 4px;
+  border-left: 3px solid var(--color-accent);
+}
+.usage strong {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  margin-right: 0.5rem;
+}
+.usage code {
+  color: white;
+  background: none;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.example {
+  margin-top: 1rem;
+}
+.example strong {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.example pre {
+  border-radius: 4px;
+  background-color: var(--color-black) !important;
+  border: 1px solid var(--color-gray-dark);
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-wrap: wrap;
+  }
+  .name {
+    min-width: auto;
+    width: auto;
+  }
+  .shortDesc {
+    width: 100%;
+    margin: 0.5rem 0 0 0;
+    order: 3;
+  }
+  .expandIcon {
+    order: 2;
+  }
+}

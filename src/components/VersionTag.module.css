@@ -1,0 +1,44 @@
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+/* Type variants */
+.stable {
+  background-color: var(--color-accent);
+  color: var(--color-black);
+}
+.stable:hover {
+  background-color: #ffd966;
+}
+
+.beta {
+  background-color: var(--color-bronze);
+  color: var(--color-black);
+}
+.beta:hover {
+  background-color: #c4a35a;
+}
+
+.latest {
+  background-color: var(--color-red);
+  color: white;
+}
+.latest:hover {
+  background-color: #c20011;
+}
+
+/* Optional: deprecated version */
+.deprecated {
+  background-color: var(--color-gray-dark);
+  color: #aaa;
+  text-decoration: line-through;
+}

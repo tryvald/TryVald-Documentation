@@ -1,0 +1,32 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+}
+
+.mainContainer {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+  margin-left: 280px; /* width of the sidebar */
+  transition: margin-left 0.3s ease;
+  width: calc(100% - 280px);
+}
+
+/* When sidebar is hidden on mobile, we handle via JS toggling class,
+   but the margin is handled by Sidebar's own transform.
+   This is just the default desktop layout. */
+
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+}

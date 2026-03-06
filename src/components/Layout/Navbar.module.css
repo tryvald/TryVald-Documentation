@@ -1,0 +1,94 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-black);
+  border-bottom: 1px solid var(--color-gray-dark);
+  padding: 0.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-family: var(--font-mono);
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  color: var(--color-accent);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none; /* Hidden on desktop, shown on mobile */
+  padding: 0.25rem 0.5rem;
+  transition: color 0.2s;
+}
+.menuButton:hover {
+  color: #ffd966; /* lighter accent */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: -0.5px;
+}
+.logo img {
+  filter: brightness(0) invert(1); /* makes white logo if original is dark */
+  height: 32px;
+  width: auto;
+}
+
+.navCenter {
+  flex: 1;
+  max-width: 400px;
+  margin: 0 2rem;
+}
+
+.navRight {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navLink {
+  font-family: var(--font-mono);
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid transparent;
+}
+.navLink:hover {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+  .menuButton {
+    display: block; /* show on mobile */
+  }
+  .navCenter {
+    display: none; /* hide search bar on mobile */
+  }
+  .navRight {
+    display: none; /* hide links on mobile – could be replaced by a drawer, but for now hidden */
+  }
+  .logo span {
+    display: none; /* hide text on mobile, only show icon */
+  }
+}
