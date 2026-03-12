@@ -1,42 +1,33 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-// eslint-disable-next-line no-unused-vars
-import { AnimatePresence, motion } from 'framer-motion';
-import Layout from './components/Layout/Layout';
-import Home from './pages/Home';
-import Changelog from './pages/Changelog';
-import Terms from './pages/Terms';
-import Privacy from './pages/Privacy';
-import './styles/global.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Changelog from "./pages/Changelog.jsx";
+import Terms from "./pages/Terms.jsx";
+import Privacy from "./pages/Privacy.jsx";
+import NotFound from "./pages/NotFound.jsx";
+import Navbar from "./components/Navbar.jsx";
 
-function App() {
-  const location = useLocation();
-
+export default function App() {
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={location.pathname}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -20 }}
-        transition={{ duration: 0.3 }}
+    <BrowserRouter>
+      {/* Accessibility: skip link */}
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 bg-gold text-nearblack px-3 py-2 rounded shadow"
       >
-        <Routes location={location}>
+        Skip to content
+      </a>
+
+      <Navbar />
+
+      <main id="main" className="pt-20 min-h-screen bg-[#1c4332] text-white">
+        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/changelog" element={<Changelog />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
-      </motion.div>
-    </AnimatePresence>
-  );
-}
-
-export default function AppWrapper() {
-  return (
-    <BrowserRouter>
-      <Layout>
-        <App />
-      </Layout>
+      </main>
     </BrowserRouter>
   );
 }
