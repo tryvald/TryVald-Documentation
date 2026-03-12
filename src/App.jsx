@@ -5,6 +5,7 @@ import Terms from "./pages/Terms.jsx";
 import Privacy from "./pages/Privacy.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import Navbar from "./components/Navbar.jsx";
+import { Analytics } from "@vercel/analytics/react"; 
 
 export default function App() {
   return (
@@ -12,7 +13,7 @@ export default function App() {
       {/* Accessibility: skip link */}
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 bg-gold text-nearblack px-3 py-2 rounded shadow"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 bg-[#ffdb89] text-[#030303] px-3 py-2 rounded shadow"
       >
         Skip to content
       </a>
@@ -28,6 +29,8 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
+
+      <Analytics /> {/* Add Analytics here, properly closed */}
     </BrowserRouter>
   );
 }
