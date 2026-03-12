@@ -1,7 +1,7 @@
 import { useRef, useState, useCallback } from "react";
 import { NavLink } from "react-router-dom";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import SearchBar from "./SearchBar";
+import SearchBar from "./SearchBar.jsx";
 import { useOnClickOutside, useEscape } from "./hooks/useOnClickOutside";
 
 const links = [
