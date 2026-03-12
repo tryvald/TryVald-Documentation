@@ -4,7 +4,7 @@ import Changelog from "./pages/Changelog.jsx";
 import Terms from "./pages/Terms.jsx";
 import Privacy from "./pages/Privacy.jsx";
 import NotFound from "./pages/NotFound.jsx";
-import Navbar from "./components/Navbar.jsx";
+import Navbar from "./components/Layout/Navbar.jsx";
 import { Analytics } from "@vercel/analytics/react"; 
 
 export default function App() {
